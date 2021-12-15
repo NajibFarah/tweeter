@@ -20,6 +20,14 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,13 +39,21 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span class="tweeter">tweeter</span>
+      <div><span class="tweeter">tweeter</span></div>
       <span class="writeTweet"><strong>Write</strong> a new tweet</span>
-      <div class="arrow">
+      <div id="arrow">
         <i class="fas fa-angle-double-down"></i>
       </div>
-      <i class="fas fa-angle-double-down"></i>
     </nav>
+    <header>
+      <div class="img">
+        <img class="profilePic" src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div class="name">
+        <h2>Najib Farah</h2>
+      </div>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container"></main>
