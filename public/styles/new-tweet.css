@@ -1,0 +1,36 @@
+form {
+  position: relative;
+  border-bottom: 3px solid black;
+  font-size: 1.2em;
+  margin-top: 5%;
+}
+
+button {
+  background-color: rgba(48, 48, 213, 0.879);
+  color: black;
+  border: 2px solid black;
+  padding: 3px 10px;
+  left: 0;
+}
+button,
+.counter {
+  font-family: "Bungee";
+  display: flex;
+  justify-content: flex-start;
+}
+
+.counter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#tweet-text {
+  background: transparent;
+  width: 100%;
+  border: none;
+  border-style: none;
+  resize: none;
+  outline: none;
+  margin-bottom: 10px;
+  border-bottom: 2px solid black;
+}

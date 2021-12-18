@@ -1,0 +1,61 @@
+#tweets-container {
+  position: relative;
+  margin: -10px;
+}
+
+.tweet-header .left {
+  float: left;
+  margin-right: 20px;
+}
+
+.tweet-header h1,
+.tweet-header h5 {
+  margin: 0;
+}
+
+.right {
+  float: right;
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+.tweet-footer {
+  margin: 20px 0 0;
+  border-top: solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message {
+  height: 100%;
+  padding: 20px 0;
+}
+
+#tweets {
+  border: 3px solid;
+}
+
+.newtweet {
+  padding-bottom: 15%;
+}
+
+.tweet-header:hover {
+  box-shadow: 10px 5px 5px #d8d3d3;
+  text-shadow: 1px 1px;
+}
+
+.fa-retweet:hover {
+  color: rgb(0, 60, 255);
+}
+
+.fa-heart:hover {
+  color: rgb(255, 0, 0);
+}
+
+.fa-flag:hover {
+  color: rgb(6, 0, 0);
+}

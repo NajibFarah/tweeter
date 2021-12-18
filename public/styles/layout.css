@@ -30,3 +30,9 @@ body {
 .logo {
   font-family: "Bungee", cursive;
 }
+
+.container {
+  width: 90%;
+  margin: auto;
+  background-color: #f4f1ec;
+}
