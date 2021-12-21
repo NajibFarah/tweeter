@@ -1,0 +1,19 @@
+@media (min-width: 1024px) {
+    .combined {
+        display: flex;
+        /* align-content: space-evenly; */
+        justify-content: space-evenly;
+        padding: 30px;
+      } 
+    .firstHeader {
+        /* margin-top: 5em; */
+        width: 350px;
+        margin-left: 25px;
+        margin-right: 70px;
+    }
+    .header {
+      background-color: #254cc9;
+      background-image: none;
+    }
+  
+  }
