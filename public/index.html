@@ -26,6 +26,11 @@
     <link rel="stylesheet" href="./styles/tweets.css" type="text/css" />
     <link
       rel="stylesheet"
+      href="./styles/responsiveDesign.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
@@ -57,52 +62,34 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header class="firstHeader">
-      <div class="img">
-        <img class="profilePic" src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div class="name">
-        <h2>Najib Farah</h2>
-      </div>
-    </header>
+    <div class="combined">
+      <header class="firstHeader">
+        <div class="img">
+          <img class="profilePic" src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div class="name">
+          <h2>Najib Farah</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form id="tweet-form">
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <button type="submit">Tweet</button>
-          <output name="counter" class="counter" for="tweet-text">140</output>
-        </form>
-      </section>
-      <section id="tweets">
-        <article class="tweet-header wrapper">
-          <header>
-            <!-- <div class="left">             -->
-            <i class="fas fa-user-alt"></i>
-            <h1 class="left">EdenHazard</h1>
-            <!-- </div> -->
-            <h5 class="right">@EdenHazard</h5>
-          </header>
-          <p class="message">Up the Chelssss #KTBFFH ⚡️</p>
-          <footer class="tweet-footer">
-            <div>
-              <p class="left" id="days">10 Days Ago</p>
-            </div>
-            <div>
-              <span class="fas fa-flag"></span>
-              <span class="fas fa-retweet"></span>
-              <span class="fas fa-heart"></span>
-            </div>
-          </footer>
-        </article>
-      </section>
-      <div class="tweets-container"></div>
-    </main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div id="errorMessage"></div>
+          <form id="tweet-form">
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </form>
+        </section>
+        <section id="tweets"></section>
+        <div class="tweets-container"></div>
+      </main>
+    </div>
   </body>
 </html>
