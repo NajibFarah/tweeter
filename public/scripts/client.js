@@ -57,9 +57,36 @@ $(document).ready(function () {
 
   const createTweetElement = function (tweet) {
     let date = new Date(tweet.created_at).toLocaleDateString();
-    let $tweet = $(
-      `
-    <article class="tweet">
+
+    return `
+  <article class="tweet-header wrapper">
+  <header>
+    <!-- <div class="left">             -->
+    <i class="fas"></i>
+    <h2 class="left">
+    ${tweet.user.name}</h2>
+    <!-- </div> --> 
+    <h5 class="right">${tweet.user.handle}</h5>
+    <img src="${tweet.user.avatars}">
+  </header>
+  <main> 
+  <p class="message">${escape(tweet.content.text)}</p>
+  </main>
+  <footer class="tweet-footer">
+    <div>
+      <p class="left" id="days">${timeago.format(tweet.created_at)}</p>
+    </div>
+    <div>
+      <span class="fas fa-flag"></span>
+      <span class="fas fa-retweet"></span>
+      <span class="fas fa-heart"></span>
+    </div>
+  </footer>
+</article> 
+    `;
+  };
+
+  /*  <article class="tweet">
     <header>
     <div class="info">
     <img src=${tweet.user.avatars} class="avatar"/>
@@ -71,28 +98,27 @@ $(document).ready(function () {
     <footer>
     <span class="date">${date}</span>
     <span class ="icons">
-    <span id="heart" class="fas fa-heart"></span>
-    <span id="retweet" class="fas fa-retweet"></span>
     <span id="flag" class="fas fa-flag"></span>
+    <span id="retweet" class="fas fa-retweet"></span>
+    <span id="heart" class="fas fa-heart"></span>
     </footer>
     </article>
-    `
-    );
-    return $tweet;
-  };
+    */
 
   const $newTweet = $("#tweet-form");
   $newTweet.on("submit", function (event) {
     event.preventDefault();
     const tweet = $("#tweet-text").val().trim().length;
     if (!tweet) {
-      $("errorMessage").show();
+      $("#errorMessage").show();
       $("#errorMessage").text("Tweet cannot be empty!");
+      return;
     }
 
     if (tweet > 140) {
-      $("errorMessage").show();
+      $("#errorMessage").show();
       $("#errorMessage").text("Tweet can't be longer than 140 characters!");
+      return;
     } else {
       const val = $(this).serialize();
       $.ajax("/tweets", {
